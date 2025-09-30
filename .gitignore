@@ -46,3 +46,12 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+# Ignore Windows system folders
+C:/Program Files/
+C:/Users/*/AppData/
+
+# Ignore zip, exe, jar files if not part of project
+*.zip
+*.exe
+*.jar
