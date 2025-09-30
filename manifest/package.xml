@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- Apex Classes & Triggers -->
     <types>
         <members>*</members>
         <name>ApexClass</name>
@@ -10,15 +12,113 @@
     </types>
     <types>
         <members>*</members>
+        <name>ApexTestSuite</name>
+    </types>
+
+    <!-- Custom Objects & Fields -->
+    <types>
+        <members>*</members>
         <name>CustomObject</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Layout</name>
+    </types>
+
+    <!-- Flows, Process Builders, Workflow Rules -->
     <types>
         <members>*</members>
         <name>Flow</name>
     </types>
     <types>
         <members>*</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApprovalProcess</name>
+    </types>
+
+    <!-- Profiles & Permissions -->
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>
+
+    <!-- Lightning Components -->
+    <types>
+        <members>*</members>
         <name>LightningComponentBundle</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+
+    <!-- Tabs & Apps -->
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomApplication</name>
+    </types>
+
+    <!-- Reports & Dashboards -->
+    <types>
+        <members>*</members>
+        <name>ReportType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Dashboard</name>
+    </types>
+
+    <!-- External Access & Integration -->
+    <types>
+        <members>*</members>
+        <name>NamedCredential</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ExternalServiceRegistration</name>
+    </types>
+
+    <!-- Custom Metadata & Validation Rules -->
+    <types>
+        <members>*</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ValidationRule</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>EmailTemplate</name>
+    </types>
+
     <version>57.0</version>
 </Package>
+

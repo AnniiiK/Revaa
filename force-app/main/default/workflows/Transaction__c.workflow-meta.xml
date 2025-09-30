@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notify_Admin_On_Transaction</fullName>
+        <description>Email will be sent to admin on every Transaction.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>System_Administrator</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>admin12@force.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>aniketkakade0305490@agentforce.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Revaa_Emails/Transaction_Alert_for_Admin</template>
+    </alerts>
+    <alerts>
+        <fullName>Withdrawal_Approval_Notification</fullName>
+        <description>Withdrawal Approval Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>investor1@force.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>investor2@force.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Revaa_Emails/Withdrawal_Approved_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Withdrawal_Rejection_Action</fullName>
+        <description>Withdrawal Rejection Action</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>investor1@force.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>investor2@force.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Revaa_Emails/Withdrawal_Rejected_Email</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_Transaction_Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Update Transaction Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Notify Admin on Transaction</fullName>
+        <actions>
+            <name>Notify_Admin_On_Transaction</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>TRUE</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Transaction Status</fullName>
+        <actions>
+            <name>Update_Transaction_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Property__c.Sold_Lots__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

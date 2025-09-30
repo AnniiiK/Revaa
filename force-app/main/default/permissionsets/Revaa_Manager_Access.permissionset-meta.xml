@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>Aniket_Kakade</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <hasActivationRequired>true</hasActivationRequired>
+    <label>Revaa_Manager_Access</label>
+    <license>Salesforce Platform</license>
+</PermissionSet>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>NgrokExternalServer</label>
+    <namedCredentialReference>NgrokLocalService</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>gettransactions</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>createtransaction</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>getinvestor</name>
+    </operations>
+    <registrationProviderType>Custom</registrationProviderType>
+    <schema>{
+  &quot;openapi&quot;: &quot;3.0.0&quot;,
+  &quot;info&quot;: {
+    &quot;title&quot;: &quot;Revaa Local API&quot;,
+    &quot;description&quot;: &quot;OpenAPI schema for Revaa integration via ngrok&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;
+  },
+  &quot;servers&quot;: [
+    {
+      &quot;url&quot;: &quot;https://chelsea-repand-relevantly.ngrok-free.dev&quot;,
+      &quot;description&quot;: &quot;Ngrok tunnel for local development&quot;
+    }
+  ],
+  &quot;paths&quot;: {
+    &quot;/transactions&quot;: {
+      &quot;get&quot;: {
+        &quot;summary&quot;: &quot;Get all Transactions&quot;,
+        &quot;operationId&quot;: &quot;getTransactions&quot;,
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;List of transactions&quot;,
+            &quot;content&quot;: {
+              &quot;application/json&quot;: {
+                &quot;schema&quot;: {
+                  &quot;type&quot;: &quot;array&quot;,
+                  &quot;items&quot;: {
+                    &quot;$ref&quot;: &quot;#/components/schemas/Transaction&quot;
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Create a Transaction&quot;,
+        &quot;operationId&quot;: &quot;createTransaction&quot;,
+        &quot;requestBody&quot;: {
+          &quot;required&quot;: true,
+          &quot;content&quot;: {
+            &quot;application/json&quot;: {
+              &quot;schema&quot;: {
+                &quot;$ref&quot;: &quot;#/components/schemas/Transaction&quot;
+              }
+            }
+          }
+        },
+        &quot;responses&quot;: {
+          &quot;201&quot;: {
+            &quot;description&quot;: &quot;Transaction created&quot;
+          }
+        }
+      }
+    },
+    &quot;/investors/{id}&quot;: {
+      &quot;get&quot;: {
+        &quot;summary&quot;: &quot;Get Investor by ID&quot;,
+        &quot;operationId&quot;: &quot;getInvestor&quot;,
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;schema&quot;: {
+              &quot;type&quot;: &quot;string&quot;
+            }
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;Investor details&quot;,
+            &quot;content&quot;: {
+              &quot;application/json&quot;: {
+                &quot;schema&quot;: {
+                  &quot;$ref&quot;: &quot;#/components/schemas/Investor&quot;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  &quot;components&quot;: {
+    &quot;schemas&quot;: {
+      &quot;Transaction&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;propertyId&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;investorId&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;lotsPurchased&quot;: { &quot;type&quot;: &quot;integer&quot; },
+          &quot;amount&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;format&quot;: &quot;double&quot; }
+        },
+        &quot;required&quot;: [&quot;propertyId&quot;, &quot;investorId&quot;, &quot;lotsPurchased&quot;]
+      },
+      &quot;Investor&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;name&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;totalInvestment&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;format&quot;: &quot;double&quot; }
+        },
+        &quot;required&quot;: [&quot;name&quot;]
+      }
+    }
+  }
+}
+</schema>
+    <schemaType>OpenApi3</schemaType>
+    <schemaUploadFileExtension>json</schemaUploadFileExtension>
+    <schemaUploadFileName>revaa_api</schemaUploadFileName>
+    <serviceBinding>{&quot;host&quot;:&quot;chelsea-repand-relevantly.ngrok-free.dev&quot;,&quot;basePath&quot;:&quot;&quot;,&quot;allowedSchemes&quot;:[&quot;HTTPS&quot;],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{},&quot;extensions&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>7</systemVersion>
+</ExternalServiceRegistration>
