@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transactions_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Investor__c</fields>
+    <fields>Property__c</fields>
+    <fields>Lots_Purchased__c</fields>
+    <label>Transactions Compact</label>
+</CompactLayout>

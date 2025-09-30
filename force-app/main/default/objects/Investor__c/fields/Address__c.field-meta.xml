@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Address__c</fullName>
     <description>Investor&apos;s Address</description>
+    <externalId>false</externalId>
     <label>Address</label>
     <length>32768</length>
     <trackHistory>false</trackHistory>

@@ -3,7 +3,7 @@
     <fullName>Name__c</fullName>
     <description>Investor&apos;s Name</description>
     <externalId>false</externalId>
-    <label>Name</label>
+    <label>First Name</label>
     <length>30</length>
     <required>true</required>
     <trackHistory>false</trackHistory>

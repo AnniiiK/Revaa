@@ -3,6 +3,7 @@
     <fullName>Lot__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Which lot was purchased</description>
+    <externalId>false</externalId>
     <label>Lot</label>
     <referenceTo>Investment_Lot__c</referenceTo>
     <relationshipLabel>Transactions</relationshipLabel>

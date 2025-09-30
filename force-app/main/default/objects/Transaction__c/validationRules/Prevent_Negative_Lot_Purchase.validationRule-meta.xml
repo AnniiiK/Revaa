@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Negative_Lot_Purchase</fullName>
+    <active>true</active>
+    <description>No Buyer can buy less than 1 Lot</description>
+    <errorConditionFormula>Lots_Purchased__c &lt;= 0</errorConditionFormula>
+    <errorMessage>You must Purchase atleast 1 Lot</errorMessage>
+</ValidationRule>

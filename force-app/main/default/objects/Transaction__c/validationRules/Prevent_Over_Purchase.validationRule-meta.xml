@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Over_Purchase</fullName>
+    <active>true</active>
+    <errorConditionFormula>Lots_Purchased__c &gt; Property__r.Available_Lots__c</errorConditionFormula>
+    <errorDisplayField>Lots_Purchased__c</errorDisplayField>
+    <errorMessage>You cannot purchase more lots than are available for this Property.</errorMessage>
+</ValidationRule>

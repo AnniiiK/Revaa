@@ -1,0 +1,108 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Revaa Local API",
+    "description": "OpenAPI schema for Revaa integration via ngrok",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://chelsea-repand-relevantly.ngrok-free.dev",
+      "description": "Ngrok tunnel for local development"
+    }
+  ],
+  "paths": {
+    "/transactions": {
+      "get": {
+        "summary": "Get all Transactions",
+        "operationId": "getTransactions",
+        "responses": {
+          "200": {
+            "description": "List of transactions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Transaction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a Transaction",
+        "operationId": "createTransaction",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Transaction created"
+          }
+        }
+      }
+    },
+    "/investors/{id}": {
+      "get": {
+        "summary": "Get Investor by ID",
+        "operationId": "getInvestor",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Investor details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Investor"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Transaction": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "propertyId": { "type": "string" },
+          "investorId": { "type": "string" },
+          "lotsPurchased": { "type": "integer" },
+          "amount": { "type": "number", "format": "double" }
+        },
+        "required": ["propertyId", "investorId", "lotsPurchased"]
+      },
+      "Investor": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "totalInvestment": { "type": "number", "format": "double" }
+        },
+        "required": ["name"]
+      }
+    }
+  }
+}

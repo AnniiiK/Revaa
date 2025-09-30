@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Revaa Dashboard" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-record-view-form record-id={recordId} object-api-name="Property__c">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Price__c"></lightning-output-field>
+                <lightning-output-field field-name="Total_Lots__c"></lightning-output-field>
+                <lightning-output-field field-name="Available_Lots__c"></lightning-output-field>
+            </lightning-record-view-form>
+
+            <lightning-button label="Purchase Lot" onclick={handlePurchase} class="slds-m-top_small"></lightning-button>
+
+            <template if:true={message}>
+                <div class="slds-text-color_success slds-m-top_small">{message}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
