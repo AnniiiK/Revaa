@@ -1,22 +1,39 @@
-<<<<<<< HEAD
-# Salesforce DX Project: Next Steps
+**Revaa – Fractional Real Estate Investment Simulation Platform**
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Revaa is a Salesforce-powered platform that simulates fractional real estate investment. It is designed to demonstrate how investors can co-own properties by buying and trading digital fractions, while ensuring transparency, compliance, and real-time performance tracking. Currently it is just a CRM and needs more development to function as a full-fledged application.
 
-## How Do You Plan to Deploy Your Changes?
+🚀 Features
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Fractional Ownership Simulation – Create, allocate, and manage property fractions.
 
-## Configure Your Salesforce DX Project
+Investor Onboarding – Streamlined process to register and participate.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Automated Workflows – Powered by Salesforce flows for investment tracking.
 
-## Read All About It
+Property Management – Manage listings, documents, and financial details.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
-=======
-# Revaa
->>>>>>> a9e02d276d4490cf1a47fce8e83fee91e6e9bb47
+Revenue Forecasting – Simulations for returns and long-term planning.
+
+Reports & Dashboards – Real-time insights into investments and performance.
+
+Compliance & Security – Validation rules and audit-ready records.
+
+
+🛠️ Tech Stack
+
+Salesforce Platform – Core CRM and automation engine.
+
+Apex & Flows – Custom logic and automation.
+
+Lightning App Builder – User-friendly interface.
+
+Reports & Dashboards – Visual insights for stakeholders.
+
+
+📌 Use Case
+
+Revaa is built as a capstone project to explore how fractional ownership can be simulated on Salesforce. It showcases the potential of leveraging CRM + investment workflows for real estate innovation.
+
+🤝 Contributions
+
+This project is in active development. Contributions, feedback, and suggestions are welcome!
